@@ -98,7 +98,28 @@ A significant change to the install script has been made. The Configuration (pre
 
 [Related Pull Request](https://github.com/apigee/apigee-hybrid-install/pull/28)
 
-### Overall approach and guide
+### Overall approach / guide
+This update represents a significant change in approach to the organization of features that are supported by the default scripts. Conceptually, this update breaks apart Configuration related activities from Deployment activities.
+
+Configuration includes:
+ - Defining the manifests
+ - Optionally creating Organization level assets, such as Service Accounts, on the Control Plane
+
+Deployment includes:
+ - Applying Apigee to a specific cluster
+ - Updating Apigee on a specific cluster
+ - Removing Apigee from a cluster
+ - All actions apply or execute the configurations defined during Configuration
+
+This approach allows Operations teams to define and review their Apigee configuration before applying it to a cluster. It also simplifies the application of Apigee from within a deployment pipeline as all Configuration activities are performed before the pipeline is triggered and only deployment steps need to run from within the pipeline.
+
+The Prerequisites and Permissions needed to perform Configuration vs Deployment are also different:
+
+|  | Prerequisites | Permissions |
+| - | - | - |
+| Configuration | Title | Title |
+| Deployment | Text | Text |
+
 
 ### Configuring the manifests
 
