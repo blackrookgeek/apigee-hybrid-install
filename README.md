@@ -13,6 +13,8 @@ Follow this [Installation Guide](https://cloud.google.com/apigee/docs/hybrid/pre
  - [Add gitignore](#add-gitignore)
  - [Removed kpt dependency](#removed-kpt-dependency)
  - [Configured automount SA on controller](#configured-automount-sa-on-controller)
+ - [Install Script Config and Deploy separation](#install-script-config-and-deploy-separation)
+
 
 ---
 ## Forward Proxy updates
@@ -88,5 +90,18 @@ When automount default service account is disabled in k8s, the controller would 
 [Related Pull Request](https://github.com/apigee/apigee-hybrid-install/pull/22)
 
 
+---
+## Install Script Config and Deploy separation
+A significant change to the install script has been made. The Configuration (pre-install) and Deployment (install into a cluster) has been separated into two scripts
+ - apigee-hybrid-setup.sh
+ - apigee-hybrid-deploy.sh
+
+[Related Pull Request](https://github.com/apigee/apigee-hybrid-install/pull/28)
+
+### Overall approach and guide
+
+### Configuring the manifests
+
+### Deploying the manifests
 
 
