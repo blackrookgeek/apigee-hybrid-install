@@ -117,8 +117,8 @@ The Prerequisites and Permissions needed to perform Configuration vs Deployment 
 
 |  | Prerequisites | Permissions |
 | - | - | - |
-| Configuration | Title | Title |
-| Deployment | Text | Text |
+| Configuration | standard: jq, envsubst, sed  Demo: + curl, gcloud | Demo Config: Org Admin |
+| Deployment | kubectl | GCP: none, k8s: admin |
 
 
 ### Configuring the manifests
