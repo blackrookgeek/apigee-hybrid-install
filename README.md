@@ -158,7 +158,8 @@ Specifies the resource types to be acted upon (at least one is REQUIRED):
                                  by the script.
                                  *NOTE*: does not include --enable-openshift-scc
     --enable-openshift-scc       Indicates that the cluster is on OpenShift and will enable scc configurations.
-    --demo-autoconfiguration     Auto configures with a Single EnvironmentGroup & Environment reading information from the Apigee Organization (Mgmt Plane) and creating and configuring a non-prod Service Account
+    --demo-autoconfiguration     Auto configures with a Single EnvironmentGroup & Environment reading information
+                                 from the Apigee Organization (Mgmt Plane) and creating and configuring a non-prod Service Account
                                  NOTEs:
                                    1) curl is required
                                    2) the user executing --demo-autoconfiguration must have a
