@@ -14,6 +14,7 @@ Follow this [Installation Guide](https://cloud.google.com/apigee/docs/hybrid/pre
  - [Removed kpt dependency](#removed-kpt-dependency)
  - [Configured automount SA on controller](#configured-automount-sa-on-controller)
  - [Install Script Config and Deploy separation](#install-script-config-and-deploy-separation)
+ - Upgraded Apigee Hybrid to v1.8.3
 
 
 ---
