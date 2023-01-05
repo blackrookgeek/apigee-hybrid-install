@@ -520,7 +520,6 @@ init() {
     fi
     readonly HAS_TS
 
-    AGCLOUD="$(which gcloud)"
     ASED="$(which sed)"
 }
 
@@ -533,6 +532,8 @@ check_prerequisites() {
 
     if [[ "${CREATE_DEMO}" == "1" ]]; then
         info "Checking prerequisites for the Demo Configuration commands..."
+        AGCLOUD="$(which gcloud)"
+
         while read -r dependency; do
             if ! command -v "${dependency}" &>/dev/null; then
                 NOTFOUND="1"
@@ -1018,8 +1019,6 @@ EOF
     ATTRIBUTE         VALUE                         NOTES
     -----------       -----------                   ---------
     --org             <ORGANIZATION_NAME>           Set the Apigee Organization.
-                                                    If not set, the project configured
-                                                    in gcloud will be used.
     --env             <ENVIRONMENT_NAME>            Set the Apigee Environment.
                                                     If not set, a random environment
                                                     within the organization will be
