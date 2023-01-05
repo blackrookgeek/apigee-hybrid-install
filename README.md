@@ -212,16 +212,8 @@ function can be used to confirm these have been applied.
     ATTRIBUTE         VALUE                         NOTES
     -----------       -----------                   ---------
     --org             <ORGANIZATION_NAME>           Set the Apigee Organization.
-                                                    If not set, the project configured
-                                                    in gcloud will be used.
     --env             <ENVIRONMENT_NAME>            Set the Apigee Environment.
-                                                    If not set, a random environment
-                                                    within the organization will be
-                                                    selected.
     --envgroup        <ENVIRONMENT_GROUP_NAME>      Set the Apigee Environment Group.
-                                                    If not set, a random environment
-                                                    group within the organization
-                                                    will be selected.
     --ingress-domain  <ENVIRONMENT_GROUP_HOSTNAME>  Set the hostname. This will be
                                                     used to generate self signed
                                                     certificates.
