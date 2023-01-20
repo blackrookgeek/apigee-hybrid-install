@@ -19,5 +19,3 @@ resources:
 - ./webhooks/
 - ../../bases/initialization/rbac/
 - ../../bases/initialization/ingress/
-
-# - ../../bases/initialization/openshift/
