@@ -42,4 +42,4 @@ fsGroup:
   - min: 998
     max: 998
 groups:
-- system:serviceaccounts:apigee # kpt-set: system:serviceaccounts:${APIGEE_NAMESPACE}
+- system:serviceaccounts:apigee # kpt-set:serviceaccounts:${APIGEE_NAMESPACE}
