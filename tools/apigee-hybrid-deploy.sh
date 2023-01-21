@@ -209,15 +209,10 @@ deploy_components() {
 
     check_if_cert_manager_exists
 
-# short term fix -- longer term fix needed to address the mixed platform scenario where an Org
-# spans OpenShift + other platform types.
-# This short term fix will rely on the setup.sh enable --openshift-scc execution alone. This means
-# the scc files will get applied to non-Openshift clusters IF the openshift add-on is used.
-# impact is limited to the initialization step. This can be manually tweaked in
-# /overlays/initialization/kustomization.yaml by changing the comment for the openshift patch
-#    if is_open_shift; then
-#        run kubectl apply -k "${ROOT_DIR}/overlays/initialization/openshift"
-#    fi
+    # check for deployment to an OpenShift cluster and apply cluster level scc
+    if is_open_shift; then
+        run kubectl apply -k "${ROOT_DIR}/overlays/initialization/openshift"
+    fi
 
     info "Creating apigee initialization kubernetes resources..."
     run kubectl apply --server-side --force-conflicts -k "${ROOT_DIR}/overlays/initialization"

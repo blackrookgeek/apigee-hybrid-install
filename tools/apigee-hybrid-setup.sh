@@ -668,6 +668,10 @@ validate_args() {
                 fi
                 ;;
             openshift-scc)
+                if [[ -z "${APIGEE_NAMESPACE}" ]]; then
+                    VALIDATION_FAILED="1"
+                    warn "--namespace is REQUIRED"
+                fi
                 ;;
             env-group-extras)
                 ;;
