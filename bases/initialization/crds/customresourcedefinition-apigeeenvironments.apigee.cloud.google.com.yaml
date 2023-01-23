@@ -28,7 +28,7 @@ spec:
         caBundle: Cg==
         service:
           name: apigee-webhook-service
-          namespace: apigee
+          namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
           path: /convert
           port: 443
       conversionReviewVersions:

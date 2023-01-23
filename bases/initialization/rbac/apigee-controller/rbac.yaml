@@ -16,7 +16,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: apigee-leader-election-role
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 rules:
 - apiGroups:
   - ""
@@ -632,7 +632,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: apigee-leader-election-rolebinding
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -640,7 +640,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -655,7 +655,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -670,4 +670,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: default
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}

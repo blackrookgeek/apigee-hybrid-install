@@ -44,6 +44,6 @@ data:
     reportBatchMaxEntries: 100
     reportBatchMaxTime: 1s
     sdsUdsPath: unix:/etc/istio/proxy/SDS
-    rootNamespace: apigee
+    rootNamespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
     trustDomain: cluster.local
   meshNetworks: 'networks: {}'

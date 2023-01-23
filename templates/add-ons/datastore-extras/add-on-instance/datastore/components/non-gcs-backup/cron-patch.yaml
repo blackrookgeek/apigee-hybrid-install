@@ -16,7 +16,7 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: apigee-cassandra-backup
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 spec:
   schedule: "<YOUR_BACKUP_SCHEDULE_CODE>" # To be modified
   jobTemplate:

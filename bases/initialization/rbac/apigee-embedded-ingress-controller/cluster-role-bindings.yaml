@@ -21,7 +21,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: apigee-ingressgateway-manager
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
   apiGroup: ""
 roleRef:
   kind: ClusterRole

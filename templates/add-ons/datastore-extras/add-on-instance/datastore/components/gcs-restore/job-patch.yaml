@@ -16,7 +16,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: apigee-cassandra-restore
-  namespace: apigee
+  namespace: apigee # kpt-set: ${APIGEE_NAMESPACE}
 spec:
   template:
     spec:
